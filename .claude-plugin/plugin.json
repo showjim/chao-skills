@@ -1,0 +1,20 @@
+{
+  "name": "chao-skills",
+  "version": "1.0.0",
+  "description": "A collection of Claude Code skills for improving daily work efficiency.",
+  "author": {
+    "name": "Chao Zhou",
+    "url": "https://github.com/showjim"
+  },
+  "repository": "https://github.com/showjim/chao-skills",
+  "license": "MIT",
+  "keywords": [
+    "stdf",
+    "semiconductor",
+    "twitter",
+    "x",
+    "article-reader",
+    "data-analysis"
+  ],
+  "skills": "./skills/"
+}
