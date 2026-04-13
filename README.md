@@ -1,6 +1,6 @@
 # chao-skills
 
-A Claude Code plugin providing a collection of skills for data parsing and content extraction.
+A collection of AI agent skills for data parsing and content extraction. Works with Claude Code, Cursor, Codex, Windsurf, and 40+ other agents via [skills.sh](https://skills.sh).
 
 ## Included Skills
 
@@ -15,23 +15,28 @@ Bypasses anti-bot measures to return clean markdown content.
 
 ## Installation
 
-### Local Development / Testing
+### Install via skills.sh (recommended)
+
+Works with Claude Code, Cursor, Codex, Windsurf, GitHub Copilot, and more:
+
 ```bash
-# Clone the repository
+# Install all skills
+npx skills add showjim/chao-skills
+
+# Install a specific skill
+npx skills add showjim/chao-skills --skill stdf-reader
+```
+
+### Claude Code Plugin
+
+```bash
 git clone https://github.com/showjim/chao-skills.git
-
-# Run Claude Code with the plugin loaded
 claude --plugin-dir /path/to/chao-skills
-```
-
-### From Marketplace (once published)
-```
-/plugin install chao-skills
 ```
 
 ## Usage
 
-Inside Claude Code, invoke skills as:
+Inside your AI agent, the skills are automatically loaded. For Claude Code plugin mode, invoke as:
 - `/chao-skills:stdf-reader`
 - `/chao-skills:twitter-article-reader`
 
@@ -45,14 +50,14 @@ Inside Claude Code, invoke skills as:
    ```markdown
    ---
    name: your-new-skill
-   description: What this skill does and when Claude should use it.
+   description: What this skill does and when the agent should use it.
    ---
 
    # Your Skill Title
 
    Detailed instructions for the skill...
    ```
-3. The skill is automatically discovered — no changes to `plugin.json` needed.
+3. The skill is automatically discovered — no extra config needed.
 
 ## License
 
