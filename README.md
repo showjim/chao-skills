@@ -9,6 +9,11 @@ Parse and analyze STDF (Standard Test Data Format) semiconductor test files.
 Convert STDF to CSV/XLSX, generate analysis reports, correlation reports,
 PDF charts, and extract specific test data.
 
+### check-info-tool
+Extract test conditions from Teradyne IG-XL ATE test programs (J750, UltraFLEX,
+UltraFLEXplus). List jobs, run analysis, and generate structured XLSM reports
+with pattern usage, flow binning, DC/AC specs, timing, and power pin levels.
+
 ### twitter-article-reader
 Extract readable content from Twitter/X articles and tweets using jina.ai.
 Bypasses anti-bot measures to return clean markdown content.
@@ -38,6 +43,7 @@ claude --plugin-dir /path/to/chao-skills
 
 Inside your AI agent, the skills are automatically loaded. For Claude Code plugin mode, invoke as:
 - `/chao-skills:stdf-reader`
+- `/chao-skills:check-info-tool`
 - `/chao-skills:twitter-article-reader`
 
 ## Adding New Skills
