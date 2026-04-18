@@ -1,0 +1,23 @@
+{
+  "name": "chao-skills",
+  "owner": {
+    "name": "Chao Zhou"
+  },
+  "metadata": {
+    "description": "A collection of Claude Code skills for semiconductor testing, data parsing, and content extraction.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "chao-skills",
+      "description": "A collection of Claude Code skills for improving daily work efficiency.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/check-info-tool",
+        "./skills/stdf-reader",
+        "./skills/twitter-article-reader"
+      ]
+    }
+  ]
+}

@@ -20,7 +20,17 @@ Bypasses anti-bot measures to return clean markdown content.
 
 ## Installation
 
-### Install via skills.sh (recommended)
+### Install via Claude Code marketplace (recommended)
+
+```bash
+# Add the marketplace
+claude plugin marketplace add showjim/chao-skills
+
+# Install the plugin
+claude plugin install chao-skills@chao-skills
+```
+
+### Install via skills.sh
 
 Works with Claude Code, Cursor, Codex, Windsurf, GitHub Copilot, and more:
 
@@ -32,7 +42,7 @@ npx skills add showjim/chao-skills
 npx skills add showjim/chao-skills --skill stdf-reader
 ```
 
-### Claude Code Plugin
+### Local development
 
 ```bash
 git clone https://github.com/showjim/chao-skills.git
