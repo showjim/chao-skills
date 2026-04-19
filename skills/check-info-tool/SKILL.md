@@ -140,12 +140,11 @@ Run-specific options:
 
 The generated `.xlsm` report contains the following information per job:
 
-- **Flow Table Analysis** — test flow structure and execution order
+- **Flow Table Analysis** — test flow structure and execution order, and corresponding pattern and AC spec
 - **Pattern Usage Map** — maps patterns to test instances with period and clock information
 - **Sort Bin Descriptions** — bin numbers and descriptions across all test suites
-- **Power Pin Levels** — DPS voltage levels per test instance with power order support
-- **AC/Timing Data** — timing period and MCG clock values (Period or Frequency mode)
-- **DC Spec Data** — DC specification values per test instance
+- **Power Pin Clamp** — Clamp currents per test instance
+- **Instances Information** — Collection of all test instances including parameters.
 
 ## Typical Workflow
 
