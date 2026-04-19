@@ -150,18 +150,19 @@ The generated `.xlsm` report contains the following information per job:
 ## Typical Workflow
 
 1. **Discover jobs** — list all available jobs in the test program
-2. **Run analysis** — execute analysis on selected (or all) jobs
-3. **Read the report** — open the generated `.xlsm` file for detailed data
+2. **Ask the user** — present the discovered job names and let the user decide which job(s) to process
+3. **Run analysis** — execute analysis using only the user-selected jobs
 
 ```bash
 # Step 1: List available jobs
 check-info list -d ./test_program.igxl -p UltraFLEXplus --json -q
 
-# Step 2: Run analysis on all jobs
-RESULT=$(check-info run -d ./test_program.igxl -p UltraFLEXplus -j all -o ./results --json -q)
+# Step 2: Present the job list to the user and ask which job(s) to analyze.
+#         Wait for the user's selection before proceeding.
 
-# Step 3: Extract output file path
-echo "$RESULT" | python3 -c "import sys, json; print(json.load(sys.stdin)['output_files'][0])"
+# Step 3: Run analysis on user-selected jobs (use exact names from step 1)
+check-info run -d ./test_program.igxl -p UltraFLEXplus -j "Job_Production,Job_Characterization" -o ./results --json -q
+# The JSON output contains "output_files" — provide these report paths to the user.
 ```
 
 ## Important Notes
