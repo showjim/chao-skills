@@ -4,17 +4,16 @@ A collection of AI agent skills for data parsing and content extraction. Works w
 
 ## Included Skills
 
-### stdf-reader
-Parse and analyze STDF (Standard Test Data Format) semiconductor test files.
-Convert STDF to CSV/XLSX, generate analysis reports, correlation reports,
-PDF charts, and extract specific test data.
+### 🔍 check-info-tool
+Extract test conditions from Teradyne IG-XL ATE test programs (J750, UltraFLEX, UltraFLEXplus). Lists jobs, runs analysis, and generates structured XLSM reports with pattern usage, flow binning, DC/AC specs, timing, and power pin levels.
 
-### check-info-tool
-Extract test conditions from Teradyne IG-XL ATE test programs (J750, UltraFLEX,
-UltraFLEXplus). List jobs, run analysis, and generate structured XLSM reports
-with pattern usage, flow binning, DC/AC specs, timing, and power pin levels.
+### 📊 shm-detect-tool
+Analyse shmoo plot pass/fail patterns from ATE CHAR logs using CNN classification. Generates XLSX reports with auto-classification (Pass/Fail/Vol/Freq/Marginal/Hole) and multi-site correlation with overlay comparison. Use for shmoo log files (.txt), shmoo plot classification, CHAR log comparison, site-to-site shmoo overlay, or shmoo pattern recognition.
 
-### twitter-article-reader
+### 📈 stdf-reader
+Parse and analyze STDF (Standard Test Data Format) semiconductor test files. Convert STDF to CSV/XLSX, generate analysis reports, correlation reports, PDF charts, and extract specific test data.
+
+### ✖️ twitter-article-reader
 Extract readable content from Twitter/X articles and tweets using jina.ai.
 Bypasses anti-bot measures to return clean markdown content.
 
