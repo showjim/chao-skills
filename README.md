@@ -10,6 +10,9 @@ Extract test conditions from Teradyne IG-XL ATE test programs (J750, UltraFLEX, 
 ### 📊 shm-detect-tool
 Analyse shmoo plot pass/fail patterns from ATE CHAR logs using CNN classification. Generates XLSX reports with auto-classification (Pass/Fail/Vol/Freq/Marginal/Hole) and multi-site correlation with overlay comparison. Use for shmoo log files (.txt), shmoo plot classification, CHAR log comparison, site-to-site shmoo overlay, or shmoo pattern recognition.
 
+### 🎓 socratic-csharp-learning
+Use Socratic questioning to teach C# through Advent of Code puzzles. Guides beginners through problem understanding, implementation, code review, and knowledge summary without providing direct solutions.
+
 ### 📈 stdf-reader
 Parse and analyze STDF (Standard Test Data Format) semiconductor test files. Convert STDF to CSV/XLSX, generate analysis reports, correlation reports, PDF charts, and extract specific test data.
 

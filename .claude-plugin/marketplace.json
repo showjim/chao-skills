@@ -5,7 +5,7 @@
   },
   "metadata": {
     "description": "A collection of Claude Code skills for semiconductor testing, data parsing, and content extraction.",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "plugins": [
     {
@@ -15,6 +15,7 @@
       "strict": false,
       "skills": [
         "./skills/check-info-tool",
+        "./skills/socratic-csharp-learning",
         "./skills/stdf-reader",
         "./skills/twitter-article-reader"
       ]
