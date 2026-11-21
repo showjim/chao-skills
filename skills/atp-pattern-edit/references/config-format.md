@@ -41,7 +41,7 @@ Rows for the same Pattern run in row order:
 ```csv
 Pattern,Process Type,Pin or Method,Cycle,User String
 Sample_ATP.atp,DSSC Capture,TDO,[7-7];[12-12],
-Sample_ATP.atp,DSSC Capture,PORN,[13-14],
+Sample_ATP.atp,DSSC Source,PORN,[13-14],
 Sample_ATP.atp,DSSC Source,TDI,[9-9],
 ```
 

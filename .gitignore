@@ -4,3 +4,7 @@ __pycache__/
 *.pyc
 .claude/
 .agents/
+atp-pattern-edit-config.csv
+*.log
+test/
+Output/

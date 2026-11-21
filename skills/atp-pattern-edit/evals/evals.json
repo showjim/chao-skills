@@ -17,10 +17,10 @@
     },
     {
       "id": 2,
-      "prompt": "On Sample_ATP.atp in inputs/Sample/, capture TDO at [7-7];[12-12], capture PORN at [13-14], then source TDI at [9-9]. Build the config, show me the plan, then run it. I confirm the run.",
+      "prompt": "On Sample_ATP.atp in inputs/Sample/, capture TDO at [7-7];[12-12], source PORN at [13-14], then source TDI at [9-9]. Build the config, show me the plan, then run it. I confirm the run.",
       "expected_output": "Writes three rows for the same Pattern in order, runs check, shows one source with three Operations, treats the prompt as confirmation, then runs. Reports one output with three Operations and its path.",
       "assertions": [
-        "Wrote three config rows for Sample_ATP.atp in the requested order: DSSC Capture TDO, DSSC Capture PORN, DSSC Source TDI.",
+        "Wrote three config rows for Sample_ATP.atp in the requested order: DSSC Capture TDO, DSSC Source PORN, DSSC Source TDI.",
         "Ran patautoedit check and showed one source with three Operations before running.",
         "Treated the prompt's \"I confirm the run\" as confirmation and did not ask again.",
         "Ran the edit and reported one output with three Operations and its path.",
