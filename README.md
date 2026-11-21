@@ -4,6 +4,9 @@ A collection of AI agent skills for data parsing and content extraction. Works w
 
 ## Included Skills
 
+### ✏️ atp-pattern-edit
+Edit Teradyne IG-XL ATP pattern files for DSSC, CMEM, and HRAM programs with the `patautoedit` CLI. Builds or validates a row-per-operation config CSV, checks the plan, and writes edited ATPs to an output folder after confirmation.
+
 ### 🔍 check-info-tool
 Extract test conditions from Teradyne IG-XL ATE test programs (J750, UltraFLEX, UltraFLEXplus). Lists jobs, runs analysis, and generates structured XLSM reports with pattern usage, flow binning, DC/AC specs, timing, and power pin levels.
 
@@ -54,8 +57,11 @@ claude --plugin-dir /path/to/chao-skills
 ## Usage
 
 Inside your AI agent, the skills are automatically loaded. For Claude Code plugin mode, invoke as:
-- `/chao-skills:stdf-reader`
+- `/chao-skills:atp-pattern-edit`
 - `/chao-skills:check-info-tool`
+- `/chao-skills:shm-detect-tool`
+- `/chao-skills:socratic-csharp-learning`
+- `/chao-skills:stdf-reader`
 - `/chao-skills:twitter-article-reader`
 
 ## Adding New Skills

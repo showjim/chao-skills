@@ -1,0 +1,47 @@
+{
+  "skill_name": "atp-pattern-edit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Use the patautoedit CLI on the ATP files in inputs/Sample/. Capture TDO at cycles [7-7];[12-12] from Sample_ATP.atp. Show me the plan, then run it. Put the edited file in a separate output folder.",
+      "expected_output": "Checks the CLI version, writes a one-Operation config for Sample_ATP.atp, runs patautoedit check with --atp-dir inputs/Sample and --json, shows the plan, then runs with --output-dir. Reports the output path and the one successful file.",
+      "assertions": [
+        "Checked the CLI version before editing.",
+        "Wrote a one-Operation config for Sample_ATP.atp with pin TDO and cycle [7-7];[12-12].",
+        "Ran patautoedit check before patautoedit run.",
+        "Wrote the edited ATP to the requested output folder, not the source folder.",
+        "Reported the output path and success count.",
+        "Left the input Sample folder unchanged."
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "On Sample_ATP.atp in inputs/Sample/, capture TDO at [7-7];[12-12], capture PORN at [13-14], then source TDI at [9-9]. Build the config, show me the plan, then run it. I confirm the run.",
+      "expected_output": "Writes three rows for the same Pattern in order, runs check, shows one source with three Operations, treats the prompt as confirmation, then runs. Reports one output with three Operations and its path.",
+      "assertions": [
+        "Wrote three config rows for Sample_ATP.atp in the requested order: DSSC Capture TDO, DSSC Capture PORN, DSSC Source TDI.",
+        "Ran patautoedit check and showed one source with three Operations before running.",
+        "Treated the prompt's \"I confirm the run\" as confirmation and did not ask again.",
+        "Ran the edit and reported one output with three Operations and its path.",
+        "Wrote the edited ATP to an output folder, not the source folder.",
+        "Left the input Sample folder unchanged."
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Use this config as-is:\nPattern,Process Type,Pin or Method,Cycle,User String\nSample_ATP.atp,DSSC Capture,TDO,[7-7];[12-12],\nmissing.atp,WFLAG,,[8-8],\nIt names Sample_ATP.atp and missing.atp. Check it and tell me what would run. Do not write anything.",
+      "expected_output": "Runs check with --json. Reports the plan for Sample_ATP.atp, lists missing.atp in skipped and warnings, and does not run or create an output folder. Explains that the missing Pattern is skipped, not an error.",
+      "assertions": [
+        "Ran patautoedit check with --json.",
+        "Reported the planned DSSC Capture for Sample_ATP.atp.",
+        "Listed missing.atp in skipped and warnings.",
+        "Did not run the edit and did not create an output folder.",
+        "Explained that a Pattern matching no candidate ATP is skipped, not an error.",
+        "Left the input Sample folder unchanged."
+      ],
+      "files": []
+    }
+  ]
+}
